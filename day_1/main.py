@@ -17,12 +17,12 @@ l2_s = sorted(l2)
 dist = 0
 
 for el1, el2 in zip(l1_s, l2_s):
-    dist = dist + abs(el1 - el2)
+    dist += abs(el1 - el2)
 sim_score = 0
 
 for el in l1:
     n = l2.count(el)
     score = int(el) * n
-    sim_score = sim_score + score
+    sim_score += score
 
 print(f'Distance = {dist}\nSimilarity score = {sim_score}')

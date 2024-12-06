@@ -1,5 +1,4 @@
 def is_safe(report):
-    """Check if a report is safe."""
     return (
             all(1 <= abs(report[i] - report[i + 1]) <= 3 for i in range(len(report) - 1))
             and (
@@ -29,5 +28,6 @@ with open('day_2/input.txt', 'r') as file:
             safe_with_damper += 1
 
 total_safe = safe + safe_with_damper
+
 print(f'There are {safe} safe reports and {safe_with_damper} safe with Problem Dampener reports what gives '
       f'{total_safe} of total safe reports.')
